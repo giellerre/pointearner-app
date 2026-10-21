@@ -115,6 +115,9 @@ export default function Rewards() {
       {isOwner ? (
         <Card>
           <Label>Nuovo premio</Label>
+          <Notice tone="info">
+            Sconti o prodotti dello stesso tipo di quelli che vendi (caffè omaggio, 10% sul prossimo taglio) non richiedono adempimenti. Un premio diverso, come un gadget o un buono di un altro negozio, è un&apos;operazione a premio: servono un regolamento scritto e una cauzione del 20% del valore dei premi (DPR 430/2001). Ne rispondi tu come promotore.
+          </Notice>
           <Field label="Nome" value={title} onChangeText={setTitle} placeholder="Caffè omaggio" maxLength={60} />
           <Field label="Costo in punti" value={cost} onChangeText={(t) => setCost(t.replace(/\D/g, ''))} keyboardType="number-pad" placeholder="100" maxLength={6} />
           <Button title="Aggiungi premio" onPress={addReward} loading={busy} />

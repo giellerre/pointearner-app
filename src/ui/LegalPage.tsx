@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { Text, View } from 'react-native';
 import { Stack } from 'expo-router';
 import { Screen } from './components';
@@ -5,7 +6,7 @@ import { space, type, usePalette } from './theme';
 
 export type LegalSection = { title: string; paragraphs?: string[]; bullets?: string[] };
 
-export function LegalPage({ title, updated, intro, sections }: { title: string; updated: string; intro: string; sections: LegalSection[] }) {
+export function LegalPage({ title, updated, intro, sections, children }: { title: string; updated: string; intro: string; sections: LegalSection[]; children?: ReactNode }) {
   const c = usePalette();
   return (
     <Screen edges={['bottom']}>
@@ -25,6 +26,7 @@ export function LegalPage({ title, updated, intro, sections }: { title: string; 
             ))}
           </View>
         ))}
+        {children ? <View style={{ gap: space.sm, marginTop: space.md }}>{children}</View> : null}
       </View>
     </Screen>
   );

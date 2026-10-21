@@ -26,6 +26,8 @@ function RootStack() {
       <Stack.Protected guard={!!session}>
         <Stack.Screen name="(app)" />
       </Stack.Protected>
+      <Stack.Screen name="privacy" options={{ headerShown: true, title: 'Privacy', headerBackTitle: 'Indietro' }} />
+      <Stack.Screen name="termini" options={{ headerShown: true, title: "Termini d'uso", headerBackTitle: 'Indietro' }} />
     </Stack>
   );
 }

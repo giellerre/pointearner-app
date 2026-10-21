@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "PointEarner",
+    "slug": "pointearner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "pointearner",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "it.pointearner.app",
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleDevelopmentRegion": "it"
+      }
+    },
+    "android": {
+      "package": "it.pointearner.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#E2452B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-web-browser",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "PointEarner usa la fotocamera solo per leggere il QR della tessera del cliente in cassa.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": true
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#E2452B",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

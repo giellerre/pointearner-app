@@ -80,7 +80,7 @@ export default function Customer() {
       {info ? (
         <>
           <Card>
-            <Label>Cliente</Label>
+            <Label>Consumatore</Label>
             <Text style={[type.h2, { color: c.ink }]}>{info.display_name}</Text>
             <View style={{ flexDirection: 'row', alignItems: 'baseline', gap: space.md }}>
               <Text style={[type.number, { color: c.ink }]}>{info.balance}</Text>
@@ -121,7 +121,7 @@ export default function Customer() {
           </View>
         </>
       ) : !error ? (
-        <Body muted>Lettura del cliente…</Body>
+        <Body muted>Lettura del QR del consumatore…</Body>
       ) : null}
 
       <Button title="Nuova scansione" variant="secondary" onPress={() => router.back()} />

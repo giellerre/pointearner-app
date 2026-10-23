@@ -84,7 +84,7 @@ export default function MyQr() {
 
   return (
     <Screen>
-      <Title sub="Mostralo in cassa: il negozio lo scansiona e ti assegna i punti">La tua tessera</Title>
+      <Title sub="Mostralo alla cassa: l’esercente lo scansiona e ti assegna i punti">La tua tessera</Title>
       {error ? <Notice tone="error">{error}</Notice> : null}
       <View
         style={{ alignSelf: 'center', backgroundColor: '#FFFFFF', padding: space.lg, borderRadius: radius.lg, borderWidth: 1, borderColor: c.line }}

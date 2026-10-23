@@ -29,7 +29,7 @@ export default function Scan() {
   function onScanned(result: BarcodeScanningResult) {
     if (locked.current) return;
     if (!result.data.startsWith(QR_PREFIX)) {
-      setHint('Questo non è un QR PointEarner. Chiedi al cliente di aprire «Il mio QR».');
+      setHint('Il codice non è un QR PointEarner. Chiedi al consumatore di aprire «Il mio QR».');
       return;
     }
     locked.current = true;
@@ -42,8 +42,8 @@ export default function Scan() {
   if (!permission.granted) {
     return (
       <Screen>
-        <Title sub={membership?.merchants.name}>Scansiona il cliente</Title>
-        <Body>Per leggere il QR del cliente serve la fotocamera. Le immagini non vengono salvate né inviate.</Body>
+        <Title sub={membership?.merchants.name}>Scansiona il consumatore</Title>
+        <Body>Per leggere il QR del consumatore è necessario l’accesso alla fotocamera. Le immagini non vengono salvate né trasmesse.</Body>
         {permission.canAskAgain ? (
           <Button title="Consenti la fotocamera" onPress={requestPermission} />
         ) : (
@@ -57,7 +57,7 @@ export default function Scan() {
     <SafeAreaView style={{ flex: 1, backgroundColor: c.bg }} edges={['top']}>
       <View style={{ padding: space.lg, gap: space.xs }}>
         <Text style={[type.title, { color: c.ink }]}>Scansiona</Text>
-        <Body muted>{membership?.merchants.name} · inquadra il QR del cliente</Body>
+        <Body muted>{membership?.merchants.name} · inquadra il QR del consumatore</Body>
       </View>
       <View style={styles.cameraBox}>
         {focused ? (

@@ -1,7 +1,9 @@
 # PointEarner — testi App Store (it-IT)
 
+> Terminologia aggiornata il 23/10/2026 (consumatore/esercente, tono formale): da caricare con la versione 1.0.1.
+
 Nome: PointEarner
-Sottotitolo (max 30): La tessera fedeltà dei negozi
+Sottotitolo (max 30): Tessera fedeltà di quartiere
 Categoria primaria: Lifestyle · secondaria: Shopping
 Prezzo: Gratuito · Disponibilità: Italia
 URL privacy: https://pointearner.expo.app/privacy
@@ -9,30 +11,30 @@ URL assistenza: https://pointearner.expo.app/termini
 Copyright: 2026 Giuseppe Luigi Ricci
 
 ## Testo promozionale (max 170)
-Raccogli i punti dei tuoi negozi di quartiere con un solo QR. Niente tessere di cartone, niente app diverse per ogni bar.
+Un unico QR per raccogliere i punti presso gli esercenti di quartiere, senza tessere cartacee né app diverse per ogni attività.
 
 ## Descrizione
-PointEarner è la tessera fedeltà dei negozi di quartiere: bar, pasticcerie, gelaterie, pizzerie.
+PointEarner è la tessera fedeltà digitale degli esercenti di quartiere: bar, pasticcerie, gelaterie, pizzerie.
 
-PER I CLIENTI
-• Un solo QR personale per tutti i negozi che usano PointEarner
-• In cassa mostri il QR, il negozio lo scansiona e ricevi i punti
+PER I CONSUMATORI
+• Un solo QR personale per tutti gli esercenti che usano PointEarner
+• Alla cassa mostri il QR, l'esercente lo scansiona e ricevi i punti
 • Vedi saldo, storico e quanti punti mancano al prossimo premio
 • Il QR cambia ogni due minuti: una foto non basta a usare i tuoi punti
 • Gratis, senza pubblicità e senza tracciamento
 
-PER I NEGOZI
-• Scansioni il QR del cliente con la fotocamera e assegni i punti in un tocco
+PER GLI ESERCENTI
+• Scansioni il QR del consumatore con la fotocamera e assegni i punti in un tocco
 • Crei i premi e decidi quanti punti servono
-• Vedi visite, clienti che tornano e premi riscattati della settimana
+• Vedi visite, consumatori che tornano e premi riscattati della settimana
 • Aggiungi i collaboratori alla cassa
 • Puoi stornare un movimento sbagliato entro 24 ore
 
-I punti valgono solo nel negozio che li ha assegnati e non hanno valore in denaro.
-L'attivazione per i negozi avviene tramite contratto con PointEarner; per i clienti l'app è gratuita.
+I punti valgono solo presso l'esercente che li ha assegnati e non hanno valore in denaro.
+L'attivazione per gli esercenti avviene tramite contratto con PointEarner; per i consumatori l'app è gratuita.
 
 ## Parole chiave (max 100)
-fedeltà,tessera,punti,premi,bar,negozio,quartiere,qr,raccolta punti,fidelity card,coupon,sconti
+fedeltà,tessera,punti,premi,bar,esercente,negozio,quartiere,qr,raccolta punti,fidelity card,coupon,sconti
 
 ## Note per il revisore (App Review Information)
 PointEarner is a loyalty-card tool for local shops in Italy.
@@ -46,7 +48,7 @@ Merchant account: [EMAIL NEGOZIO] / [PASSWORD]
 
 How to test:
 1. Customer account: "Tessere" shows loyalty cards with points; "Il mio QR" shows the personal QR, refreshed every 2 minutes.
-2. Merchant account: Profile → switch to "Modalità negozio". "Scansiona" opens the camera to read a customer QR; "Premi" manages rewards; "Attività" shows weekly stats.
+2. Merchant account: Profile → switch to "Modalità esercente". "Scansiona" opens the camera to read a customer QR; "Premi" manages rewards; "Attività" shows weekly stats.
 3. To test the full flow you need two devices: show the customer QR on one and scan it with the merchant account on the other. If only one device is available, the customer QR is also visible at https://pointearner.expo.app after signing in with the customer account.
 
 Account deletion: Profile → "Elimina account".

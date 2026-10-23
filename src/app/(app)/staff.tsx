@@ -45,7 +45,7 @@ export default function Staff() {
     if (e) setError(friendlyError(e));
     else {
       setEmail('');
-      setNotice('Collaboratore aggiunto. Trova il negozio in Profilo → Modalità negozio.');
+      setNotice('Collaboratore aggiunto. L’attività è disponibile in Profilo → Modalità esercente.');
       load();
     }
   }
@@ -63,7 +63,7 @@ export default function Staff() {
   return (
     <Screen edges={['bottom']}>
       <Body muted>
-        I collaboratori scansionano i clienti, assegnano punti e riscattano premi. Premi, storni e collaboratori restano al titolare.
+        I collaboratori leggono il QR dei consumatori, assegnano punti e riscattano premi. La gestione di premi, storni e collaboratori resta riservata al titolare.
       </Body>
       {error ? <Notice tone="error">{error}</Notice> : null}
       {notice ? <Notice tone="ok">{notice}</Notice> : null}

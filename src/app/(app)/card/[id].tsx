@@ -48,7 +48,7 @@ export default function CardDetail() {
 
       <View style={{ gap: space.sm }}>
         <Label>Premi</Label>
-        {rewards.length === 0 ? <Body muted>Il negozio non ha ancora pubblicato premi.</Body> : null}
+        {rewards.length === 0 ? <Body muted>L’esercente non ha ancora pubblicato premi.</Body> : null}
         {rewards.map((r) => (
           <Card key={r.id} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
             <View style={{ flex: 1, gap: 2 }}>

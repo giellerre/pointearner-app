@@ -7,12 +7,12 @@ export default function Termini() {
     <LegalPage
       title="Termini d'uso"
       updated="21 ottobre 2026"
-      intro="Questi termini regolano l'uso gratuito di PointEarner da parte dei clienti dei negozi. Il servizio è fornito da Giuseppe Luigi Ricci, Roma (Italia). I negozi che usano PointEarner per il proprio programma fedeltà firmano un contratto separato."
+      intro="Questi termini regolano l'uso gratuito di PointEarner da parte dei consumatori presso gli esercenti aderenti. Il servizio è fornito da Giuseppe Luigi Ricci, Roma (Italia). Gli esercenti che usano PointEarner per il proprio programma fedeltà firmano un contratto separato."
       sections={[
         {
           title: 'Il servizio',
           paragraphs: [
-            'PointEarner ti permette di avere la tessera fedeltà dei negozi che lo usano e di accumulare punti mostrando in cassa un codice QR personale. Per te il servizio è gratuito.',
+            'PointEarner ti permette di avere la tessera fedeltà degli esercenti che lo usano e di accumulare punti mostrando alla cassa un codice QR personale. Per te il servizio è gratuito.',
           ],
         },
         {
@@ -24,9 +24,9 @@ export default function Termini() {
         {
           title: 'Punti e premi',
           paragraphs: [
-            'I punti valgono solo nel negozio dove sono stati assegnati. Non hanno valore in denaro, non si convertono in contanti e non si trasferiscono ad altri utenti o negozi.',
-            'Punti per visita, premi e loro disponibilità li decide ciascun negozio, che ne risponde. Il negozio è il promotore del proprio programma fedeltà.',
-            "I punti si perdono se elimini l'account, se la tessera resta senza movimenti per 24 mesi, o se il negozio smette di usare PointEarner. Nell'ultimo caso cerchiamo di avvisarti nell'app prima della chiusura.",
+            'I punti valgono solo presso l’esercente che li ha assegnati. Non hanno valore in denaro, non si convertono in contanti e non si trasferiscono ad altri utenti o esercenti.',
+            'Punti per visita, premi e loro disponibilità li decide ciascun esercente, che ne risponde. L’esercente è il promotore del proprio programma fedeltà.',
+            "I punti si perdono se elimini l'account, se la tessera resta senza movimenti per 24 mesi, o se l’esercente smette di usare PointEarner. Nell'ultimo caso cerchiamo di avvisarti nell'app prima della chiusura.",
           ],
         },
         {

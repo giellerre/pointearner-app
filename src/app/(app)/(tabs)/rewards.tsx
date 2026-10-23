@@ -102,7 +102,7 @@ export default function Rewards() {
           <Card key={r.id} style={{ flexDirection: 'row', alignItems: 'center', gap: space.md }}>
             <View style={{ flex: 1, gap: 2 }}>
               <Body style={{ color: r.active ? c.ink : c.muted }}>{r.title}</Body>
-              <Body muted style={type.small}>{r.active ? 'Visibile ai clienti' : 'Nascosto'}</Body>
+              <Body muted style={type.small}>{r.active ? 'Visibile ai consumatori' : 'Nascosto'}</Body>
             </View>
             <PointsBadge points={r.cost_points} />
             {isOwner ? (
@@ -116,7 +116,7 @@ export default function Rewards() {
         <Card>
           <Label>Nuovo premio</Label>
           <Notice tone="info">
-            Sconti o prodotti dello stesso tipo di quelli che vendi (caffè omaggio, 10% sul prossimo taglio) non richiedono adempimenti. Un premio diverso, come un gadget o un buono di un altro negozio, è un&apos;operazione a premio: servono un regolamento scritto e una cauzione del 20% del valore dei premi (DPR 430/2001). Ne rispondi tu come promotore.
+            Sconti o prodotti dello stesso tipo di quelli che vendi (caffè omaggio, 10% sul prossimo taglio) non richiedono adempimenti. Un premio diverso, come un gadget o un buono di un altro esercente, è un&apos;operazione a premio: servono un regolamento scritto e una cauzione del 20% del valore dei premi (DPR 430/2001). Ne rispondi tu come promotore.
           </Notice>
           <Field label="Nome" value={title} onChangeText={setTitle} placeholder="Caffè omaggio" maxLength={60} />
           <Field label="Costo in punti" value={cost} onChangeText={(t) => setCost(t.replace(/\D/g, ''))} keyboardType="number-pad" placeholder="100" maxLength={6} />

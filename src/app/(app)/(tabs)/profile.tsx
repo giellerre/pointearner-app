@@ -52,19 +52,19 @@ export default function Profile() {
         <Card>
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: space.md }}>
             <View style={{ flex: 1 }}>
-              <Body>Modalità negozio</Body>
-              <Body muted style={type.small}>Scansiona i clienti, gestisci premi e attività</Body>
+              <Body>Modalità esercente</Body>
+              <Body muted style={type.small}>Leggi il QR dei consumatori, gestisci premi e attività</Body>
             </View>
             <Switch
               value={mode === 'merchant'}
               onValueChange={(v) => setMode(v ? 'merchant' : 'customer')}
               trackColor={{ true: c.accent, false: c.line }}
-              accessibilityLabel="Modalità negozio"
+              accessibilityLabel="Modalità esercente"
             />
           </View>
           {memberships.length > 1 ? (
             <View style={{ gap: space.sm }}>
-              <Label>Negozio attivo</Label>
+              <Label>Attività selezionata</Label>
               {memberships.map((m) => {
                 const on = m.merchant_id === activeMerchantId;
                 return (
@@ -85,13 +85,13 @@ export default function Profile() {
           {memberships.find((m) => m.merchant_id === activeMerchantId)?.role === 'owner' ? (
             <Button title="Collaboratori" variant="secondary" onPress={() => router.push('/staff')} />
           ) : null}
-          <Button title="Registra un altro negozio" variant="secondary" onPress={() => router.push('/merchant-new')} />
+          <Button title="Registra un’altra attività" variant="secondary" onPress={() => router.push('/merchant-new')} />
         </Card>
       ) : (
         <Card>
           <Body>Hai un bar, una pasticceria o un ristorante?</Body>
-          <Body muted style={type.small}>Registra l’attività e assegna punti ai tuoi clienti dal telefono.</Body>
-          <Button title="Registra il tuo negozio" variant="secondary" onPress={() => router.push('/merchant-new')} />
+          <Body muted style={type.small}>Registra l’attività e assegna punti ai consumatori dal telefono.</Body>
+          <Button title="Registra la tua attività" variant="secondary" onPress={() => router.push('/merchant-new')} />
         </Card>
       )}
 
@@ -110,7 +110,7 @@ export default function Profile() {
       <Card>
         <Label>Elimina account</Label>
         <Body muted style={type.small}>
-          Cancella il tuo account, le tue tessere e i tuoi punti in modo definitivo. Se sei l’unico titolare di un negozio, anche il negozio viene chiuso.
+          Cancella il tuo account, le tue tessere e i tuoi punti in modo definitivo. Se sei l’unico titolare di un’attività, anche l’attività viene chiusa.
         </Body>
         {confirmDelete ? (
           <View style={{ gap: space.sm }}>
@@ -132,7 +132,7 @@ function NameEditor({ initial, onSave }: { initial: string; onSave: (name: strin
   const [name, setName] = useState(initial);
   return (
     <Card>
-      <Field label="Nome mostrato al negozio" value={name} onChangeText={setName} placeholder="Facoltativo" maxLength={60} />
+      <Field label="Nome visibile all’esercente" value={name} onChangeText={setName} placeholder="Facoltativo" maxLength={60} />
       <Button title="Salva nome" variant="secondary" onPress={() => onSave(name)} />
     </Card>
   );

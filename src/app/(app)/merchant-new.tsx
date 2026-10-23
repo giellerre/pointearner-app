@@ -39,7 +39,7 @@ export default function MerchantNew() {
 
   return (
     <Screen edges={['bottom']}>
-      <Body muted>Registra la tua attività per assegnare punti ai clienti. Durante il pilota il servizio è gratuito.</Body>
+      <Body muted>Registra la tua attività per assegnare punti ai consumatori. Durante la fase pilota il servizio è gratuito.</Body>
       {error ? <Notice tone="error">{error}</Notice> : null}
       <Field label="Nome dell’attività" value={name} onChangeText={setName} placeholder="Bar Centrale" maxLength={80} />
       <View style={{ gap: space.sm }}>

@@ -15,8 +15,8 @@ export default function AppLayout() {
     >
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="card/[id]" options={{ title: 'Tessera' }} />
-      <Stack.Screen name="merchant-new" options={{ title: 'Registra il negozio', presentation: 'modal' }} />
-      <Stack.Screen name="customer" options={{ title: 'Cliente', presentation: 'modal' }} />
+      <Stack.Screen name="merchant-new" options={{ title: 'Registra l’attività', presentation: 'modal' }} />
+      <Stack.Screen name="customer" options={{ title: 'Consumatore', presentation: 'modal' }} />
       <Stack.Screen name="staff" options={{ title: 'Collaboratori' }} />
     </Stack>
   );

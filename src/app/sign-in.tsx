@@ -68,7 +68,7 @@ export default function SignIn() {
         <View style={{ gap: space.md, marginTop: space.xxl }}>
           <Logo size={56} />
           <Text style={[type.title, { color: c.ink }]}>PointEarner</Text>
-          <Body muted>Le tessere fedeltà dei tuoi negozi di quartiere, in un QR.</Body>
+          <Body muted>Le tessere fedeltà degli esercenti di quartiere, in un unico QR.</Body>
         </View>
 
         {step === 'email' ? (

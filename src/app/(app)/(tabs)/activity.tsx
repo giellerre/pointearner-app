@@ -10,7 +10,7 @@ import { Body, Card, Label, Notice, Title, formatDate } from '@/ui/components';
 import { radius, space, type, usePalette } from '@/ui/theme';
 
 const KIND_LABEL = { EARN: 'Visita', REDEEM: 'Premio', REVERSAL: 'Storno' } as const;
-const NORTH_STAR = 20; // scansioni a settimana per considerare attivo un negozio del pilota
+const NORTH_STAR = 20; // scansioni a settimana per considerare attivo un esercente del pilota
 
 export default function Activity() {
   const c = usePalette();
@@ -85,9 +85,9 @@ export default function Activity() {
 
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.md }}>
           {[
-            ['Clienti (7 gg)', stats?.customers_7d],
+            ['Consumatori (7 gg)', stats?.customers_7d],
             ['Premi (7 gg)', stats?.redemptions_7d],
-            ['Clienti totali', stats?.customers_total],
+            ['Consumatori totali', stats?.customers_total],
             ['Tornati 2+ volte', stats?.returning_customers],
           ].map(([label, value]) => (
             <View key={label as string} style={{ flexGrow: 1, flexBasis: '45%', backgroundColor: c.surface, borderRadius: radius.md, padding: space.md, borderWidth: 1, borderColor: c.line }}>

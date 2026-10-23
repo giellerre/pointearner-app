@@ -30,9 +30,9 @@ export default function EliminaAccount() {
           title: 'Cosa viene cancellato',
           bullets: [
             'Account ed email di accesso.',
-            'Nome che mostri ai negozi.',
-            'Tutte le tessere, i punti e lo storico delle visite in ogni negozio.',
-            'Se sei l’unico titolare di un negozio, anche il negozio con i suoi premi e collaboratori.',
+            'Nome visibile agli esercenti.',
+            'Tutte le tessere, i punti e lo storico delle visite presso ogni esercente.',
+            'Se sei l’unico titolare di un’attività, anche l’attività con i relativi premi e collaboratori.',
           ],
           paragraphs: ['Non conserviamo copie dopo la cancellazione. I punti non sono recuperabili.'],
         },

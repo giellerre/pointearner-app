@@ -35,11 +35,11 @@ export default function Cards() {
         contentContainerStyle={{ padding: space.lg, gap: space.lg }}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={async () => { setRefreshing(true); await load(); setRefreshing(false); }} tintColor={c.accent} />}
       >
-        <Title sub="Una tessera per ogni negozio dove accumuli punti">Le tue tessere</Title>
+        <Title sub="Una tessera per ogni esercente presso cui accumuli punti">Le tue tessere</Title>
         {error ? <Notice tone="error">{error}</Notice> : null}
         {cards && cards.length === 0 ? (
           <Empty title="Nessuna tessera, per ora">
-            Al prossimo acquisto mostra il tuo QR in cassa: la tessera di quel negozio compare qui.
+            Al prossimo acquisto mostra il tuo QR alla cassa: la tessera dell’esercente comparirà qui.
           </Empty>
         ) : null}
         {cards && cards.length === 0 ? <Button title="Mostra il mio QR" onPress={() => router.navigate('/qr')} /> : null}

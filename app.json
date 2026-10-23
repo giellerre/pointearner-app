@@ -44,7 +44,7 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "PointEarner usa la fotocamera solo per leggere il QR della tessera del cliente in cassa.",
+          "cameraPermission": "PointEarner usa la fotocamera solo per leggere il QR della tessera del consumatore alla cassa.",
           "microphonePermission": false,
           "recordAudioAndroid": false,
           "barcodeScannerEnabled": true

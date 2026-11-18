@@ -46,3 +46,6 @@ export const type = {
   label: { fontSize: 12, fontWeight: '600' as const, letterSpacing: 0.6, textTransform: 'uppercase' as const },
   number: { fontSize: 40, fontWeight: '700' as const, fontVariant: ['tabular-nums' as const] },
 };
+
+// Larghezza massima del contenuto: su iPad il testo resta leggibile e centrato
+export const readable = { width: '100%' as const, maxWidth: 640, alignSelf: 'center' as const };

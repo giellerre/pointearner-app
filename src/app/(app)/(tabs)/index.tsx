@@ -6,7 +6,7 @@ import { supabase } from '@/lib/supabase';
 import { friendlyError } from '@/lib/errors';
 import type { Card as CardT } from '@/lib/types';
 import { Body, Button, Card, Empty, Label, Notice, PointsBadge, Title } from '@/ui/components';
-import { space, type, usePalette } from '@/ui/theme';
+import { space, type, usePalette, readable } from '@/ui/theme';
 
 export default function Cards() {
   const c = usePalette();
@@ -32,7 +32,7 @@ export default function Cards() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: c.bg }} edges={['top']}>
       <ScrollView
-        contentContainerStyle={{ padding: space.lg, gap: space.lg }}
+        contentContainerStyle={[{ padding: space.lg, gap: space.lg }, readable]}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={async () => { setRefreshing(true); await load(); setRefreshing(false); }} tintColor={c.accent} />}
       >
         <Title sub="Una tessera per ogni esercente presso cui accumuli punti">Le tue tessere</Title>

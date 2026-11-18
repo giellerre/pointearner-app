@@ -11,16 +11,16 @@ import {
   type ViewStyle,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { radius, space, type, usePalette } from './theme';
+import { radius, readable, space, type, usePalette } from './theme';
 
 export function Screen({ children, scroll = true, edges }: { children: ReactNode; scroll?: boolean; edges?: ('top' | 'bottom')[] }) {
   const c = usePalette();
   const body = scroll ? (
-    <ScrollView contentContainerStyle={styles.screenContent} keyboardShouldPersistTaps="handled">
+    <ScrollView contentContainerStyle={[styles.screenContent, readable]} keyboardShouldPersistTaps="handled">
       {children}
     </ScrollView>
   ) : (
-    <View style={[styles.screenContent, { flex: 1 }]}>{children}</View>
+    <View style={[styles.screenContent, readable, { flex: 1 }]}>{children}</View>
   );
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: c.bg }} edges={edges ?? ['top']}>

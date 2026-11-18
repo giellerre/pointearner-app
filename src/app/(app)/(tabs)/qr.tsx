@@ -80,7 +80,8 @@ export default function MyQr() {
   );
 
   const seconds = Math.max(0, Math.round((expiresAt - now) / 1000));
-  const size = Math.min(width - space.lg * 4, 300);
+  // Su iPad il QR è più grande, ma resta dentro la colonna di contenuto
+  const size = Math.min(Math.min(width, 640) - space.lg * 4, width >= 700 ? 380 : 300);
 
   return (
     <Screen>

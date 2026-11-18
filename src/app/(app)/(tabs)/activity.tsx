@@ -7,7 +7,7 @@ import { friendlyError } from '@/lib/errors';
 import { useActiveMerchant } from '@/lib/session';
 import type { ActivityRow, MerchantStats } from '@/lib/types';
 import { Body, Card, Label, Notice, Title, formatDate } from '@/ui/components';
-import { radius, space, type, usePalette } from '@/ui/theme';
+import { radius, space, type, usePalette, readable } from '@/ui/theme';
 
 const KIND_LABEL = { EARN: 'Visita', REDEEM: 'Premio', REVERSAL: 'Storno' } as const;
 const NORTH_STAR = 20; // scansioni a settimana per considerare attivo un esercente del pilota
@@ -62,7 +62,7 @@ export default function Activity() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: c.bg }} edges={['top']}>
       <ScrollView
-        contentContainerStyle={{ padding: space.lg, gap: space.lg }}
+        contentContainerStyle={[{ padding: space.lg, gap: space.lg }, readable]}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={async () => { setRefreshing(true); await load(); setRefreshing(false); }} tintColor={c.accent} />}
       >
         <Title sub={membership?.merchants.name}>Attività</Title>

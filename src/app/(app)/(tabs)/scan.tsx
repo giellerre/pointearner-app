@@ -7,7 +7,7 @@ import * as Haptics from 'expo-haptics';
 import { QR_PREFIX } from '@/lib/config';
 import { useActiveMerchant } from '@/lib/session';
 import { Body, Button, Notice, Screen, Title } from '@/ui/components';
-import { radius, space, type, usePalette } from '@/ui/theme';
+import { radius, readable, space, type, usePalette } from '@/ui/theme';
 
 export default function Scan() {
   const c = usePalette();
@@ -55,6 +55,7 @@ export default function Scan() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: c.bg }} edges={['top']}>
+      <View style={[{ flex: 1 }, readable]}>
       <View style={{ padding: space.lg, gap: space.xs }}>
         <Text style={[type.title, { color: c.ink }]}>Scansiona</Text>
         <Body muted>{membership?.merchants.name} · inquadra il QR del consumatore</Body>
@@ -71,11 +72,12 @@ export default function Scan() {
         <View pointerEvents="none" style={[styles.frame, { borderColor: c.accent }]} />
       </View>
       <View style={{ padding: space.lg }}>{hint ? <Notice tone="error">{hint}</Notice> : null}</View>
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   cameraBox: { flex: 1, marginHorizontal: space.lg, borderRadius: radius.lg, overflow: 'hidden', backgroundColor: '#000', alignItems: 'center', justifyContent: 'center' },
-  frame: { width: '65%', aspectRatio: 1, borderWidth: 3, borderRadius: radius.lg },
+  frame: { width: '65%', maxWidth: 360, aspectRatio: 1, borderWidth: 3, borderRadius: radius.lg },
 });

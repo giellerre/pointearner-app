@@ -1,18 +1,19 @@
+import { CONTACT_EMAIL, OWNER } from '@/lib/config';
 import { LegalPage } from '@/ui/LegalPage';
 
-const CONTACT = 'giuseppeluigiricci@gmail.com';
+const CONTACT = CONTACT_EMAIL;
 
 export default function Privacy() {
   return (
     <LegalPage
       title="Informativa privacy"
-      updated="21 ottobre 2026"
+      updated="19 novembre 2026"
       intro="Questa informativa spiega quali dati personali tratta PointEarner, chi ne è responsabile, perché e per quanto tempo, ai sensi degli artt. 13 e 14 del Regolamento (UE) 2016/679 (GDPR). PointEarner è uno strumento che gli esercenti usano per gestire il proprio programma fedeltà: per questo i ruoli sono due, descritti qui sotto."
       sections={[
         {
           title: 'Chi tratta i tuoi dati',
           bullets: [
-            `Account PointEarner. Per l'account (email, nome che scegli, accesso all'app) il titolare del trattamento è Giuseppe Luigi Ricci, Roma (Italia), che gestisce PointEarner. Contatto: ${CONTACT}.`,
+            `Account PointEarner. Per l'account (email, nome che scegli, accesso all'app) il titolare del trattamento è ${OWNER}, che gestisce PointEarner. Contatto: ${CONTACT}.`,
             "Tessera fedeltà di ciascun esercente. Per i dati della tessera presso un esercente (visite, punti, premi) il titolare è l’esercente che gestisce quel programma fedeltà. PointEarner tratta questi dati per conto dell’esercente, come responsabile del trattamento (art. 28 GDPR), sulla base di un accordo scritto con l’esercente.",
             "Collaboratori di un esercente. Per i dati dei collaboratori che un esercente aggiunge all'app il titolare è l’esercente; PointEarner è responsabile del trattamento.",
           ],

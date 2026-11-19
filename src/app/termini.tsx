@@ -1,13 +1,14 @@
+import { CONTACT_EMAIL, OWNER } from '@/lib/config';
 import { LegalPage } from '@/ui/LegalPage';
 
-const CONTACT = 'giuseppeluigiricci@gmail.com';
+const CONTACT = CONTACT_EMAIL;
 
 export default function Termini() {
   return (
     <LegalPage
       title="Termini d'uso"
-      updated="21 ottobre 2026"
-      intro="Questi termini regolano l'uso gratuito di PointEarner da parte dei consumatori presso gli esercenti aderenti. Il servizio è fornito da Giuseppe Luigi Ricci, Roma (Italia). Gli esercenti che usano PointEarner per il proprio programma fedeltà firmano un contratto separato."
+      updated="19 novembre 2026"
+      intro={`Questi termini regolano l'uso gratuito di PointEarner da parte dei consumatori presso gli esercenti aderenti. Il servizio è fornito da ${OWNER}. Gli esercenti che usano PointEarner per il proprio programma fedeltà firmano un contratto separato.`}
       sections={[
         {
           title: 'Il servizio',

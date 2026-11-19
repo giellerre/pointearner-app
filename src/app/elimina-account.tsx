@@ -1,9 +1,9 @@
 import { Linking } from 'react-native';
-import { SUPPORT_EMAIL } from '@/lib/config';
+import { CONTACT_EMAIL, SUPPORT_EMAIL } from '@/lib/config';
 import { Button } from '@/ui/components';
 import { LegalPage } from '@/ui/LegalPage';
 
-const CONTACT = SUPPORT_EMAIL || 'giuseppeluigiricci@gmail.com';
+const CONTACT = SUPPORT_EMAIL || CONTACT_EMAIL;
 
 export default function EliminaAccount() {
   const subject = encodeURIComponent('Richiesta di eliminazione account PointEarner');

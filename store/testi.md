@@ -8,7 +8,7 @@ Categoria primaria: Lifestyle · secondaria: Shopping
 Prezzo: Gratuito · Disponibilità: Italia
 URL privacy: https://pointearner.expo.app/privacy
 URL assistenza: https://pointearner.expo.app/termini
-Copyright: 2026 Giuseppe Luigi Ricci
+Copyright: 2026 Elvizia
 
 ## Testo promozionale (max 170)
 Un unico QR per raccogliere i punti presso gli esercenti di quartiere, senza tessere cartacee né app diverse per ogni attività.
